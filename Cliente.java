@@ -14,11 +14,11 @@ public class Cliente {
     
 	private static void exibirMenu() {
 		System.out.println("1. cadastrar um produto");
-		System.out.println("2. alterar as informa√ß√µes de um produto"); 
+		System.out.println("2. alterar as informaÁıes de um produto"); 
 		System.out.println("3. deletar um produto");
-		System.out.println("4. recuperar as informa√ß√µes de um produto cadastrado");
+		System.out.println("4. recuperar as informaÁıes de um produto cadastrado");
 		System.out.println("0. sair");
-		System.out.println("Op√ß√£o:");
+		System.out.println("OpÁ„o:");
 	}
 
 	
@@ -44,31 +44,31 @@ public class Cliente {
     				System.out.println("Cadastrar um produto");
     				System.out.print("Infome id(somente numeros):");
     				id = sc.nextInt();
-    				System.out.print("Descri√ß√£o do produto:");
+    				System.out.print("DescriÁ„o do produto:");
     				nome = sc.next();
     				System.out.println("Informe valor:");
     				valor = sc.nextFloat();
     				if(gerente.cadastoProduto(id, nome, valor)) {
     					System.out.println("Produto cadastrado com sucesso!");
     				}else {
-    					System.out.println("N√£o foi posivel criar ou o id j√° foi usado! \n*************************");
+    					System.out.println("N„o foi posivel criar ou o id j· foi usado! \n*************************");
     				}
     				break;
     			case "2":
-    				System.out.println("Alterar as informa√ß√µes de um produto\n Informe id:");
+    				System.out.println("Alterar as informaÁıes de um produto\n Informe id:");
     				id=sc.nextInt();
     				if(gerente.pesquisa(id)) {
-    					System.out.print("Descri√ß√£o do produto:");
+    					System.out.print("DescriÁ„o do produto:");
     					nome = sc.next();
     					System.out.println("Informe valor:");
     					valor = sc.nextFloat();
     					if(gerente.atualizaProduto(id, nome, valor)) {
-    						System.out.println("Altera√ß√£o efetuada com sucesso! \n*************************");
+    						System.out.println("AlteraÁ„o efetuada com sucesso! \n*************************");
     					}else {
-    						System.out.println("A altera√ß√£o n√£o pode ser efetuada.\n*************************");
+    						System.out.println("A alteraÁ„o n„o pode ser efetuada.\n*************************");
     					}
     				}else {
-    					System.out.println("Produto n√£o encontrado ou n√£o cadastrado.\n*************************");
+    					System.out.println("Produto n„o encontrado ou n„o cadastrado.\n*************************");
     				}
     				break;
     			case "3":
@@ -77,11 +77,11 @@ public class Cliente {
     				if(gerente.removerProduto(id)) {
     					System.out.println("Produto removido com sucesso! \n*************************");
     				}else {
-    					System.out.println("O produto n√£o foi removido ou n√£o foi cadastrado!\n*************************");
+    					System.out.println("O produto n„o foi removido ou n„o foi cadastrado!\n*************************");
     				}
     				break;
     			case "4":
-    				System.out.println("Recuperar as informa√ß√µes de um produto cadastrado:\n Informe id:");
+    				System.out.println("Recuperar as informaÁıes de um produto cadastrado:\n Informe id:");
     				id = sc.nextInt();
     				System.out.println(gerente.pesquisaInfo(id)+"\n*************************");
     				break;
@@ -92,8 +92,8 @@ public class Cliente {
     	} catch (MalformedURLException | RemoteException | NotBoundException e) {
     		System.out.println("Erro:" + e.toString());
     	} catch (Exception e) {
-    		//JOptionPane.showMessageDialog(null, "Entrada inv√°lida", e.getMessage(), JOptionPane.ERROR_MESSAGE);
-    		System.out.println("Entrada inv√°lida"+ e.getMessage());
+    		//JOptionPane.showMessageDialog(null, "Entrada inv·lida", e.getMessage(), JOptionPane.ERROR_MESSAGE);
+    		System.out.println("Entrada inv·lida"+ e.getMessage());
     		System.exit(-1);
     	}
     }

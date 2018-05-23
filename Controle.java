@@ -35,7 +35,7 @@ public class Controle extends UnicastRemoteObject implements Mensageiro {
 				return saida;
 			}
 		}
-		saida=  "produto n√£o encontrado!";
+		saida=  "produto n„o encontrado!";
 		return saida;
 		
 	}
